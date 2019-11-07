@@ -150,10 +150,10 @@ function loadProjectFile() {
       var iosPlatformApi = require(path.join(iosPlatformPath(), '/cordova/Api'));
       var projectFileApi = require(path.join(iosPlatformPath(), '/cordova/lib/projectFile.js'));
       var locations = (new iosPlatformApi()).locations;
-      projectFile = projectFileApi.parse(locations);      
+      projectFile = projectFileApi.parse(locations);
     }
   }
-  
+
   return projectFile;
 }
 
@@ -193,7 +193,7 @@ function pathToEntitlementsFile() {
     projectName = configXmlHelper.getProjectName(),
     fileName = projectName + '.entitlements';
 
-  return path.join(projectName, 'Resources', fileName);
+  return path.join(projectName, fileName);
 }
 
 // endregion
